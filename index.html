@@ -3,17 +3,18 @@
     <head>
         <title>Plug</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="styles.css" />
+        <link rel="stylesheet" href="css/styles.css" />
+        <script src="js/common.js"></script>
     </head>
     <body>
         <div id="container">
             <header id="header">
                 <a href="index.html" aria-label="Logo label" class="header__link">
-                    <strong>Алвин <img class="header__link-image" src="logo.jpeg"> Алмазов</strong>
+                    <strong>Алвин <img class="header__link-image" src="img/logo.jpeg"> Алмазов</strong>
                 </a>
             </header>
             <main id="main" role="main">
-                <article class="list">
+                <article class="list" id="infinite_list">
                     <h1 class="list-header">Бесплатные прогнозы на спорт</h1>
                     <article class="article">
                         <section class="article__header">
@@ -64,7 +65,155 @@
                             <p>На выезде Ростов выглядит плохо, и проиграл все пять матчей, однако дома подопечные Валерия Карпина напротив, смотрятся великолепно, и ни разу еще не проиграли, одержав четыре победы и в одном случае поделили очки с соперником. Также в этих матчах ростовчане выглядели надежно в обороне, пропустив всего три мяча, и ни разу они не позволили сопернику пробить себя больше одного раза за матч.</p>
                         </section>
                     </article>
+                    <article class="article">
+                        <section class="article__header">
+                            <h2 class="article__header-title">
+                                <a class="article__header-link" href="article.html">Тюмень — Арсенал Т</a>
+                            </h2>
+                        </section>
+                        <section class="article__info">
+                            <p>Футбол. Россия. Премьер-Лига</p>
+                            <p>
+                                Прогноз: 
+                                <a href="theory.html"><b>ТМ(2.5)</b></a>
+                                . 100$ -> 186$
+                            </p>
+                        </section>
+                        <div class="article__ad"><p>Реклама</p></div>
+                        <section class="article__content">
+                            <p>300В одном из матчей восьмого тура российской Первой лиги дебютант сезона Тюмень будет принимать на своем поле тульский Арсенал.</p>
+                            <p>Для новичка Тюмень демонстрирует дерзкий футбол. В семи матчах они одержали четыре победы, две встречи свели вничью и потерпели всего одно поражение. В этих матчах они забили 11 мячей и пропустили всего 6, в среднем менее гола за игру.</p>
+                        </section>
+                    </article>
+                    <article class="article">
+                        <section class="article__header">
+                            <span class="article__header-live">Live. 12 мин</span>
+                            <h2 class="article__header-title">
+                                <a class="article__header-link" href="article.html">Краснодар — Спартак</a>
+                            </h2>
+                        </section>
+                        <section class="article__info">
+                            <p>Футбол. Россия. Премьер-Лига</p>
+                            <p>Прогноз: Краснодар. 100$ -> 190$.</p>
+                        </section>
+                        <div class="article__ad"><p>Реклама</p></div>
+                    </article>
+                    <article class="article">
+                        <section class="article__header">
+                            <h2 class="article__header-title">
+                                <a class="article__header-link" href="article.html">Ростов — Динамо М</a>
+                            </h2>
+                        </section>
+                        <section class="article__info">
+                            <p>Футбол. Россия. Премьер-Лига</p>
+                            <p>Прогноз: 2-й тайм больше 1-го. 100$ -> 249$.</p>
+                        </section>
+                        <div class="article__ad"><p>Реклама</p></div>
+                        <section class="article__content">
+                            <p>450В завершающим седьмой тур российской Премьер-Лиги матче футбольный клуб Ростов будет принимать на своем поле московское Динамо.</p>
+                            <p>На выезде Ростов выглядит плохо, и проиграл все пять матчей, однако дома подопечные Валерия Карпина напротив, смотрятся великолепно, и ни разу еще не проиграли, одержав четыре победы и в одном случае поделили очки с соперником. Также в этих матчах ростовчане выглядели надежно в обороне, пропустив всего три мяча, и ни разу они не позволили сопернику пробить себя больше одного раза за матч.</p>
+                        </section>
+                    </article>
+                    <article class="article">
+                        <section class="article__header">
+                            <h2 class="article__header-title">
+                                <a class="article__header-link" href="article.html">Тюмень — Арсенал Т</a>
+                            </h2>
+                        </section>
+                        <section class="article__info">
+                            <p>Футбол. Россия. Премьер-Лига</p>
+                            <p>
+                                Прогноз: 
+                                <a href="theory.html"><b>ТМ(2.5)</b></a>
+                                . 100$ -> 186$
+                            </p>
+                        </section>
+                        <div class="article__ad"><p>Реклама</p></div>
+                        <section class="article__content">
+                            <p>300В одном из матчей восьмого тура российской Первой лиги дебютант сезона Тюмень будет принимать на своем поле тульский Арсенал.</p>
+                            <p>Для новичка Тюмень демонстрирует дерзкий футбол. В семи матчах они одержали четыре победы, две встречи свели вничью и потерпели всего одно поражение. В этих матчах они забили 11 мячей и пропустили всего 6, в среднем менее гола за игру.</p>
+                        </section>
+                    </article>
+                    <article class="article">
+                        <section class="article__header">
+                            <span class="article__header-live">Live. 12 мин</span>
+                            <h2 class="article__header-title">
+                                <a class="article__header-link" href="article.html">Краснодар — Спартак</a>
+                            </h2>
+                        </section>
+                        <section class="article__info">
+                            <p>Футбол. Россия. Премьер-Лига</p>
+                            <p>Прогноз: Краснодар. 100$ -> 190$.</p>
+                        </section>
+                        <div class="article__ad"><p>Реклама</p></div>
+                    </article>
+                    <article class="article">
+                        <section class="article__header">
+                            <h2 class="article__header-title">
+                                <a class="article__header-link" href="article.html">Ростов — Динамо М</a>
+                            </h2>
+                        </section>
+                        <section class="article__info">
+                            <p>Футбол. Россия. Премьер-Лига</p>
+                            <p>Прогноз: 2-й тайм больше 1-го. 100$ -> 249$.</p>
+                        </section>
+                        <div class="article__ad"><p>Реклама</p></div>
+                        <section class="article__content">
+                            <p>450В завершающим седьмой тур российской Премьер-Лиги матче футбольный клуб Ростов будет принимать на своем поле московское Динамо.</p>
+                            <p>На выезде Ростов выглядит плохо, и проиграл все пять матчей, однако дома подопечные Валерия Карпина напротив, смотрятся великолепно, и ни разу еще не проиграли, одержав четыре победы и в одном случае поделили очки с соперником. Также в этих матчах ростовчане выглядели надежно в обороне, пропустив всего три мяча, и ни разу они не позволили сопернику пробить себя больше одного раза за матч.</p>
+                        </section>
+                    </article>
+                    <article class="article">
+                        <section class="article__header">
+                            <h2 class="article__header-title">
+                                <a class="article__header-link" href="article.html">Тюмень — Арсенал Т</a>
+                            </h2>
+                        </section>
+                        <section class="article__info">
+                            <p>Футбол. Россия. Премьер-Лига</p>
+                            <p>
+                                Прогноз: 
+                                <a href="theory.html"><b>ТМ(2.5)</b></a>
+                                . 100$ -> 186$
+                            </p>
+                        </section>
+                        <div class="article__ad"><p>Реклама</p></div>
+                        <section class="article__content">
+                            <p>300В одном из матчей восьмого тура российской Первой лиги дебютант сезона Тюмень будет принимать на своем поле тульский Арсенал.</p>
+                            <p>Для новичка Тюмень демонстрирует дерзкий футбол. В семи матчах они одержали четыре победы, две встречи свели вничью и потерпели всего одно поражение. В этих матчах они забили 11 мячей и пропустили всего 6, в среднем менее гола за игру.</p>
+                        </section>
+                    </article>
+                    <article class="article">
+                        <section class="article__header">
+                            <span class="article__header-live">Live. 12 мин</span>
+                            <h2 class="article__header-title">
+                                <a class="article__header-link" href="article.html">Краснодар — Спартак</a>
+                            </h2>
+                        </section>
+                        <section class="article__info">
+                            <p>Футбол. Россия. Премьер-Лига</p>
+                            <p>Прогноз: Краснодар. 100$ -> 190$.</p>
+                        </section>
+                        <div class="article__ad"><p>Реклама</p></div>
+                    </article>
+                    <article class="article">
+                        <section class="article__header">
+                            <h2 class="article__header-title">
+                                <a class="article__header-link" href="article.html">Ростов — Динамо М</a>
+                            </h2>
+                        </section>
+                        <section class="article__info">
+                            <p>Футбол. Россия. Премьер-Лига</p>
+                            <p>Прогноз: 2-й тайм больше 1-го. 100$ -> 249$.</p>
+                        </section>
+                        <div class="article__ad"><p>Реклама</p></div>
+                        <section class="article__content">
+                            <p>450В завершающим седьмой тур российской Премьер-Лиги матче футбольный клуб Ростов будет принимать на своем поле московское Динамо.</p>
+                            <p>На выезде Ростов выглядит плохо, и проиграл все пять матчей, однако дома подопечные Валерия Карпина напротив, смотрятся великолепно, и ни разу еще не проиграли, одержав четыре победы и в одном случае поделили очки с соперником. Также в этих матчах ростовчане выглядели надежно в обороне, пропустив всего три мяча, и ни разу они не позволили сопернику пробить себя больше одного раза за матч.</p>
+                        </section>
+                    </article>
                 </article>
+                <div id="infinite_scroll-helper--outer"></div>
             </main>
             <footer id="footer">
                 <p class="footer__p">

@@ -26,6 +26,7 @@ a:hover {
     max-width: 100%;
     padding: 2em;
     margin: 0 auto;
+    flex: 1;
 }
 /* header */
 #header {
@@ -52,6 +53,7 @@ a:hover {
     margin: 1em 0;
 }
 .list .article {
+    display: none;
     border-bottom: 1px solid #efefef;
     padding: 1em 0;
 }
