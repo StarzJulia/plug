@@ -52,6 +52,11 @@ a:hover {
 .list {
     margin: 1em 0;
 }
+.list-header {
+    font-weight: normal;
+    text-transform: uppercase;
+    margin: 0 0 2em;
+}
 .list .article {
     display: none;
     box-shadow: 5px 5px 10px 5px #efefef;
@@ -65,6 +70,7 @@ a:hover {
     justify-content: center;
     align-items: center;
     background-color: #efefef;
+    margin: 1em 0;
 }
 .article__ad--small {
     height: 150px;
