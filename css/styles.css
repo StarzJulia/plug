@@ -1,11 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
-html, body {
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html,
+body {
     min-height: 100%;
 }
 body {
-    font: normal 15px/1.4 'Roboto', sans-serif;
+    font: normal 18px/1.4 'Roboto', sans-serif;
     color: #1d1b1b;
-    margin: 0;
 }
 a {
     color: inherit;
@@ -81,6 +86,12 @@ a:hover {
     margin: 0;
     font-weight: normal;
 }
+.article__header-title:not(:first-child) {
+    margin-top: 1em;
+}
+.article__header-subtitle {
+    color: #555;
+}
 .article__header-hint {
     color: #555;
     font-size: 60%;
@@ -94,10 +105,15 @@ a:hover {
 .article__header-hint__link:hover {
     text-decoration: none;
 }
-.article__header-live {
-    color: #c9481c;
+.article__header--sub {
     font-size: smaller;
     font-style: italic;
+}
+.article__header-live {
+    color: #c9481c;
+}
+.article__header-express {
+    color: green;
 }
 .article__info {
     margin: .3em 0 1em;
@@ -117,6 +133,21 @@ a:hover {
 .article__content p {
     margin: 1em 0;
 }
+
+.article_links {
+    margin-top: 3em;
+}
+.article_links-main {
+    display: block;
+    padding: 1em;
+    color: #c9481c;
+    border: 1px solid #c9481c;
+    text-align: center;
+}
+.article_link-main:hover {
+    background-color: #c9481c;
+    color: #fff;
+}
 /* footer */
 #footer {
     background: #eee;
@@ -130,4 +161,730 @@ a:hover {
     max-width: 100%;
     padding: 1em 2em;
     margin: 0 auto;
+}
+
+/* old styles */
+.main-heading {
+    margin: 0 0 10px
+}
+.main-heading h1 {
+    font-size: 24px;
+    text-transform: uppercase;
+    line-height: 1.1
+}
+.main-heading h1 span.link {
+    font-size: 24px;
+    margin-left: 10px;
+    font-weight: 500;
+    position: relative
+}
+.main-heading h1 span.link a {
+    margin-left: 5px
+}
+.main-heading h1 span.link b {
+    cursor: pointer;
+    margin-left: 5px
+}
+.main-heading span.head {
+    text-transform: uppercase;
+    line-height: 1.1;
+    font-weight: 500;
+    font-size: 25px
+}
+.main-heading div.link {
+    font-size: 20px;
+    margin-left: 10px;
+    font-weight: 300;
+    position: relative;
+    display: inline-block;
+    position: relative
+}
+.main-heading div.link h1 {
+    cursor: pointer;
+    margin: 0 0 0 5px;
+    display: inline;
+    padding: 0;
+    font-weight: 300;
+    font-size: 20px
+}
+ul.select {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    min-width: 300px;
+    max-height: 185px;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    border: 1px solid #eee;
+    white-space: nowrap;
+    text-transform: none;
+    z-index: 9;
+    overflow-y: auto!important;
+    display: none;
+    box-shadow: 1px 1px 3px rgba(0,0,0,.2)
+}
+ul.select.active {
+    display: block;
+}
+ul.select li {
+    width: 100%;
+    line-height: 18px
+}
+ul.select li a {
+    padding: 5px 20px 5px 5px;
+    display: block
+}
+ul.select li:hover {
+    background: #c9481c
+}
+ul.select li:hover a {
+    color: #fff;
+    text-decoration: none
+}
+ul.select .current_page_item a {
+    color: #c9481c
+}
+.main-heading span.link b:after,
+.main-heading div.link h1:after {
+    content: '';
+    border-top: 6px solid #333;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    display: inline-block;
+    vertical-align: bottom;
+    margin: 0 0 10px 10px
+}
+
+/* form */
+.hidden {
+    display: none;
+}
+table {
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.5;
+}
+form label,
+.label {
+    display: flex;
+    flex-direction: row;
+    font-weight: 500;
+    padding: 15px 30px;
+    align-items: center;
+    justify-content: center;
+}
+form label {
+    padding-right: 0;
+}
+.calc_form form .td {
+    display: table;
+    width: 100%;
+    padding: 0 30px;
+    border-bottom: 1px solid #ccc;
+}
+
+.calc_form form .last {
+    border-bottom: 0;
+}
+
+.calc_form form .radio_td {
+    padding: 15px 30px;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #ccc;
+}
+
+form b {
+    font-weight: 400;
+    line-height: 1.5;
+}
+form select {
+    width: 150px;
+    max-width: 100%;
+    border: 1px solid #ccc;
+    font-size: 1em;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background: linear-gradient(45deg,transparent 49%,#000 50%),linear-gradient(135deg,#000 50%,transparent 50%),#fff;
+    background-position: calc(100% - 8px) calc(50% + 1px),calc(100% - 5px) calc(50% + 1px),100% 0;
+    background-size: 3px 4px,3px 4px,1.5em 2.5em;
+    background-repeat: no-repeat;
+    padding: 10px;
+    border-radius: 0
+}
+
+form input[type=text],
+form input[type=email] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 150px;
+    max-width: 100%;
+    font-size: 1em
+}
+
+table input[type=text],
+table input[type=email],
+table select,
+span input[type=text],
+span input[type=email],
+span select {
+    width: 100%
+}
+
+input#result,
+input#result2 {
+    max-width: 45%
+}
+
+table input.smallInput {
+    max-width: 100px
+}
+
+table input[name=margin] {
+    width: 60%
+}
+
+form input[readonly] {
+    background: #eee
+}
+
+input[type=radio] {
+    -webkit-appearance: none;
+    border: 1px solid #000;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    position: relative
+}
+
+input[type=radio]:checked:after {
+    content: '';
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    background: #000;
+    border-radius: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto
+}
+
+form input[type=checkbox],
+form input[type=radio] {
+    float: left;
+    margin: 0 10px 0 0
+}
+
+label.l_radio {
+    padding: 0 30px
+}
+.divided_area label {
+    width: 33.3333%;
+    display: inline-block;
+    vertical-align: middle
+}
+.divided_area label.td {
+    border-left: 1px solid #ccc;
+    padding-left: 30px
+}
+.divided_area label:first-child {
+    border-left: 0
+}
+.divided_area .label {
+    width: 65%;
+    display: inline-block;
+    vertical-align: bottom
+}
+.divided_area label.td b {
+    padding-right: 0;
+    padding-bottom: 0;
+    border: 0
+}
+.divided_area label.td span {
+    display: block;
+    margin-top: 5px;
+    padding-top: 0;
+    padding-left: 0
+}
+form textarea {
+    width: 500px;
+    resize: none;
+    max-width: 100%;
+    height: 100px;
+    min-height: 100px;
+    margin: 0 0 10px;
+    padding: 5px 10px;
+    border: 1px solid #ccc
+}
+form button,
+.button {
+    border: 1px solid #c9481c;
+    background: #c9481c;
+    padding: 1px;
+    display: inline-block;
+    margin: 30px auto;
+    color: #fff;
+    padding: 8px 35px;
+    font-size: 1em;
+    font-family: open sans,sans-serif;
+    font-weight: 700;
+    line-height: 1;
+    cursor: pointer;
+    text-transform: uppercase
+}
+span.button {
+    margin: 30px;
+    text-align: center;
+    display: block;
+    padding: 15px 5px
+}
+.result,
+#null {
+    display: none
+}
+
+.form_content form button {
+    display: block
+}
+form input[type=submit] {
+    border: 1px solid #c9481c;
+    background: #c9481c;
+    padding: 10px 36px;
+    display: block;
+    margin: 30px 0 0;
+    font-size: 14px;
+    font-family: open sans,sans-serif;
+    color: #fff
+}
+form button:hover,
+a.button:hover,
+span.button:hover {
+    background: #fff;
+    cursor: pointer;
+    color: #c9481c;
+    text-decoration: none
+}
+form input[type=submit]:hover {
+    background: #fff;
+    color: #c9481c;
+    cursor: pointer
+}
+.calc_form {
+    margin: 1em 0;
+}
+.calc_form ul {
+    list-style: none
+}
+.choice .hidden {
+    display: none;
+    width: 0
+}
+.calc_form form table tr.selected {
+    background: #bbb
+}
+.calc_form ul {
+    position: relative;
+    z-index: 1
+}
+.calc_form ul li {
+    display: inline-block;
+    position: relative;
+    padding: 5px 10px;
+    font-size: 12px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 300
+}
+.calc_form li.indicator {
+    position: absolute;
+    top: 100%;
+    background: #c9481c;
+    height: 2px;
+    padding: 0;
+    transition: left .4s,right .4s
+}
+.calc_form ul li.active {
+    color: #c9481c
+}
+
+.calc_form ul li a {
+    color: #1d1b1b
+}
+
+.calc_form ul li.active a {
+    color: #fff
+}
+
+.form_content {
+    border: 1px solid #ccc;
+    margin-bottom: 30px;
+    font-size: .9em
+}
+
+.form_content form {
+    position: relative
+}
+
+form p {
+    padding: 0;
+    max-width: none;
+    margin: 0
+}
+
+.form_content .result {
+    padding: 10px 30px 20px;
+    border-top: 5px solid #c9481c;
+    background: #eee
+}
+
+.form_content .result p {
+    line-height: 2;
+    margin: 0;
+    border: 1px dotted #ccc;
+    margin-top: -1px
+}
+
+.form_content .result>strong {
+    font-size: 1.4em;
+    display: inline-block;
+    margin-bottom: 1em;
+    border-bottom: 1px solid #c9481c
+}
+
+.form_content .result .colomns p {
+    border: 0;
+    padding: 0 10px;
+    line-height: 2.5;
+    margin: 0;
+    border-top: 1px solid #ccc;
+    border-left: 1px solid #ccc
+}
+
+.form_content .result p+table {
+    margin-top: 20px
+}
+
+p#result_text,#win,
+.result p.res,
+.result p#result,
+.result p.header {
+    border: 0;
+    margin: 0
+}
+
+.form_content .result p.winner {
+    color: green
+}
+
+.form_content .result .colomns {
+    -webkit-column-count: 6;
+    -moz-column-count: 6;
+    column-count: 6;
+    margin-top: 10px;
+    -webkit-column-gap: 0;
+    -moz-column-gap: 0;
+    column-gap: 0;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc
+}
+
+.form_content .result p b {
+    width: 35%;
+    vertical-align: middle;
+    display: inline-block;
+    padding: 5px;
+    border-right: 1px dotted #ccc;
+    line-height: 1.5
+}
+
+.form_content .result b+span {
+    display: inline-block;
+    width: 64%;
+    vertical-align: middle;
+    padding: 5px;
+    line-height: 1.5
+}
+
+.form_content table {
+    margin: 0;
+    border-collapse: collapse;
+    font-size: 1em!important
+}
+
+.form_content .changing_area table {
+    table-layout: fixed
+}
+
+.result table.inline {
+    text-align: left
+}
+
+.result .inline td:first-child {
+    width: 35%
+}
+
+.result .inline td {
+    padding: 5px 2px;
+    border: 0;
+    border: 1px dotted #ccc
+}
+
+table td,
+table th {
+    height: 47px;
+    border: 1px solid #ccc;
+    border-right: 0;
+    border-top: 0;
+    padding: 5px;
+}
+
+.form_content table td:first-child,
+.form_content table th:first-child {
+    border-left: 0
+}
+
+.items {
+    table-layout: fixed
+}
+
+.form_content .result table th,
+.form_content .result table td {
+    border: 1px dotted #ccc;
+    height: auto;
+}
+
+.form_content table label {
+    padding: 0!important;
+}
+
+.form_content table input[type=radio],
+.form_content table input[type=checkbox] {
+    float: none;
+    margin: 0;
+    box-sizing: content-box;
+}
+
+.form_content table input[type=radio]+b,
+.form_content table input[type=checkbox]+b {
+    margin-left: 5px
+}
+
+.form_content .result table tr:nth-child(odd) {
+    background: 0 0
+}
+
+
+
+.calc_form form label.td b {
+    width: 40%;
+    vertical-align: middle;
+    display: table-cell;
+}
+
+.calc_form form label.td b {
+    border-right: 1px solid #ccc;
+    padding: 10px 5px 10px 0;
+}
+
+.calc_form form label.td span {
+    vertical-align: middle;
+    display: table-cell;
+    padding-left: 10px;
+}
+
+.calc_form form label.td span {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+form .dark {
+    background: #eee;
+}
+form .half {
+    width: 50%;
+    display: flex;
+}
+form .half b,
+form .label b {
+    margin-bottom: 5px;
+    display: inline-block;
+}
+form .label b.result_label {
+    width: 90%;
+    margin-left: 10px;
+    text-align: center;
+}
+form .table_label {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.half.td_label:not(:first-child) {
+    border-left: 1px solid #ccc;
+    padding-left: 15px;
+}
+
+.half.td_label:not(:last-child) {
+    padding-right: 15px;
+    padding-left: 0
+}
+
+.half.td_label span {
+    width: 100%;
+    line-height: 1
+}
+
+@media screen and (max-width: 900px) {
+    .calc_form ul li {
+        padding: 5px
+    }
+
+    table td,
+    table th {
+        padding: 5px
+    }
+}
+@media screen and (max-width: 700px) {
+    #main {padding: 1em;}
+    .form_content .result {
+        padding: 10px 15px
+    }
+
+    .form_content .result p b,
+    .form_content .result b+span {
+        width: 49.5%
+    }
+
+    form label {
+        padding: 10px
+    }
+
+    form .label {
+        padding: 0
+    }
+
+    .calc_form form .td {
+        padding: 0 10px
+    }
+
+    .radios {
+        margin-top: 0
+    }
+
+    span.button {
+        margin: 10px
+    }
+
+    #alert,
+    #alert2,
+    p#null,
+    #warning,
+    #warning1 {
+        position: static;
+        padding: 0 10px 5px;
+        margin: 0
+    }
+
+    .main-heading div.link {
+        margin: 0;
+        position: static
+    }
+
+    .main-heading {
+        position: relative
+    }
+
+    .divided_area label {
+        width: 100%;
+        border-left: 0!important
+    }
+
+    .divided_area label:not(:last-child) {
+        border-bottom: 1px solid #ccc
+    }
+
+    .calc_form form .td.last {
+        border-bottom: 0
+    }
+
+    .divided_area label.td {
+        padding-left: 10px
+    }
+    .divided_area label[for=handicap_owners] {
+        width: 49%;
+        margin-right: 2%
+    }
+    .divided_area label[for=handicap_guests] {
+        width: 49%
+    }
+
+    table input.eventName,
+    table input.smallInput {
+        max-width: 75px
+    }
+
+    table td.title,
+    table th.title {
+        white-space: normal
+    }
+
+    .form_content {
+        font-size: .8em
+    }
+
+    form .label {
+        display: block
+    }
+    .label>.half {
+        width: 100%;
+        border: 0
+    }
+
+    .half label.half {
+        max-width: 45%
+    }
+
+    .half label.half:first-child {
+        margin-right: 19px
+    }
+
+    .half.td_label:not(:first-child) {
+        border: 0;
+        padding-right: 10px;
+        padding-left: 10px
+    }
+
+    .half.td_label:not(:last-child) {
+        padding-right: 10px;
+        padding-left: 10px;
+        padding-bottom: 10px
+    }
+
+    .half.td_label .td_label {
+        padding-right: 0;
+        padding-left: 0
+    }
+    .half.td_label:not(:first-child) {
+        padding-left: 10px;
+        padding-right: 10px
+    }
+    .label>.half:not(:first-child) {
+        border-top: 1px solid #ccc;
+    }
+
+    .form_content .result .colomns {
+        -webkit-column-count: 3;
+        -moz-column-count: 3;
+        column-count: 3
+    }
 }

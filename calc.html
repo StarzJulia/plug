@@ -4,6 +4,7 @@
         <title>Plug - Calculator</title>
         <meta name="viewport" content="width=device-width" />
         <link rel="stylesheet" href="css/styles.css" />
+        <script src="js/common.js"></script>
     </head>
     <body>
         <div id="container">
@@ -13,12 +14,121 @@
                 </a>
             </header>
             <main id="main" role="main">
-                <article class="article">
-                    <section class="article__header">
-                        <h1 class="article__header-title">Тюмень — Арсенал Т</h1>
-                    </section>
-                    
-                </article>
+                <section>
+                    <div class="main-heading">
+                        <span class="head">Calculators</span>
+                        <div class="link">/ <h1 class="select">1×2, Handicap, Totals</h1>
+                            <ul class="select">
+                                <li class="page_item page-item-107 current_page_item"><a href="https://alvin-almazov.com/calculator/betting/" aria-current="page">1×2, Handicap, Totals</a></li>
+                                <li class="page_item page-item-110"><a href="https://alvin-almazov.com/calculator/system/">System</a></li>
+                                <li class="page_item page-item-119"><a href="https://alvin-almazov.com/calculator/sure-bets/">Sure Bets</a></li>
+                                <li class="page_item page-item-113"><a href="https://alvin-almazov.com/calculator/odds-converter/">Odds Converter</a></li>
+                                <li class="page_item page-item-122"><a href="https://alvin-almazov.com/calculator/asian-handicap/">Asian Handicap</a></li>
+                                <li class="page_item page-item-134"><a href="https://alvin-almazov.com/calculator/bookmaker-margin/">Bookmaker Margin</a></li>
+                                <li class="page_item page-item-137"><a href="https://alvin-almazov.com/calculator/odds-creation/">Odds Creation</a></li>
+                                <li class="page_item page-item-116"><a href="https://alvin-almazov.com/calculator/roi/">ROI</a></li>
+                                <li class="page_item page-item-128"><a href="https://alvin-almazov.com/calculator/value-betting/">Value Betting</a></li>
+                                <li class="page_item page-item-131"><a href="https://alvin-almazov.com/calculator/fixed-profit/">Fixed Profit</a></li>
+                                <li class="page_item page-item-143"><a href="https://alvin-almazov.com/calculator/break-even-point/">Break Even</a></li>
+                                <li class="page_item page-item-158"><a href="https://alvin-almazov.com/calculator/x2-and-dnb/">X2 &amp; DNB</a></li>
+                                <li class="page_item page-item-146"><a href="https://alvin-almazov.com/calculator/european-handicap/">European Handicap</a></li>
+                                <li class="page_item page-item-149"><a href="https://alvin-almazov.com/calculator/dutching/">Dutching</a></li>
+                                <li class="page_item page-item-161"><a href="https://alvin-almazov.com/calculator/bets-series/">Streak</a></li>
+                                <li class="page_item page-item-155"><a href="https://alvin-almazov.com/calculator/moneyline-converter/">MoneyLine</a></li>
+                                <li class="page_item page-item-170"><a href="https://alvin-almazov.com/calculator/odds-after-commission/">Real Odds</a></li>
+                                <li class="page_item page-item-164"><a href="https://alvin-almazov.com/calculator/freeplay-value/">Freeplay Value</a></li>
+                                <li class="page_item page-item-152"><a href="https://alvin-almazov.com/calculator/kelly-criterion/">Kelly Criterion</a></li>
+                                <li class="page_item page-item-140"><a href="https://alvin-almazov.com/calculator/s8/">S8</a></li>
+                                <li class="page_item page-item-173"><a href="https://alvin-almazov.com/calculator/lay-stake/">Lay Stake</a></li>
+                                <li class="page_item page-item-167"><a href="https://alvin-almazov.com/calculator/back-lay-equivalents/">Back &amp; Lay</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p>Calculator on the outcome, handicap, total and individual total.</p>
+                    <div class="calc_form betting">
+                        <ul class="choices">
+                        <li class="active choice"><span class="choice-name">1x2 (3-way)</span>
+                        <div class="hidden">
+                        <table>
+                        <tbody>
+                        <tr>
+                        <td><label class="radio01"><input id="item1" checked="checked" name="item" type="checkbox" data-result="0"><b>Home</b></label></td>
+                        <td><label class="radio02"><input id="item2" name="item" type="checkbox" data-result="1"><b>Away</b></label></td>
+                        <td><label class="radio03"><input id="item3" name="item" type="checkbox" data-result="2"><b>Draw</b></label></td>
+                        </tr>
+                        </tbody>
+                        </table>
+                        </div>
+                        </li>
+                        <li class="choice"><span class="choice-name">Handicap</span>
+                        <div class="hidden"><label for="handicap_owners" class="td dark"><b>Home Team Handicap</b><span><input id="handicap_owners" name="handicap_owners" type="text" value="" inputmode="decimal"></span></label><label for="handicap_guests" class="td"><b>Away Team Handicap</b><span><input id="handicap_guests" name="handicap_guests" type="text" value="" inputmode="decimal"></span></label></div>
+                        </li>
+                        <li class="choice"><span class="choice-name">Total</span>
+                        <div class="hidden">
+                        <table>
+                        <tbody>
+                        <tr>
+                        <td><label class="radio"><input id="radio" checked="checked" name="radioT" type="radio" value="0"><b> Over</b></label></td>
+                        <td><label class="radio2"><input id="radio2" name="radioT" type="radio" value="1"><b> Under</b></label></td>
+                        <td><input id="total_owners" name="total_owners" type="text" value="" inputmode="decimal"></td>
+                        </tr>
+                        </tbody>
+                        </table>
+                        </div>
+                        </li>
+                        <li class="choice"><span class="choice-name">Team Total</span>
+                        <div class="hidden">
+                        <table>
+                        <tbody>
+                        <tr>
+                        <td>
+                        <label class="radio3"><input id="radio3" checked="checked" name="radio1" type="radio" value="0"><b> Over</b></label><br>
+                        <label class="radio4"><input id="radio4" name="radio1" type="radio" value="1"><b> Under</b></label>
+                        </td>
+                        <td>
+                        <label for="total_owners2"><b>Home Team</b><input id="total_owners2" name="total_owners2" type="text" value="" inputmode="decimal"></label><br>
+                        <label for="total_guests2"><b>Away Team</b><input id="total_guests2" name="total_guests2" type="text" value="" inputmode="decimal"></label>
+                        </td>
+                        </tr>
+                        </tbody>
+                        </table>
+                        </div>
+                        </li>
+                        <li class="indicator" style="left: 0px; right: 843.225px;"></li>
+                        </ul>
+                        <div class="form_content">
+                        <form action="" method="post">
+                        <p></p>
+                        <div class="changing_area">
+                        <table>
+                        <tbody>
+                        <tr>
+                        <td><label class="radio01"><input id="item1" checked="checked" name="item" type="checkbox" data-result="0"><b>Home</b></label></td>
+                        <td><label class="radio02"><input id="item2" name="item" type="checkbox" data-result="1"><b>Away</b></label></td>
+                        <td><label class="radio03"><input id="item3" name="item" type="checkbox" data-result="2"><b>Draw</b></label></td>
+                        </tr>
+                        </tbody>
+                        </table>
+                        </div>
+                        <div class="label dark table_label">
+                        <div class="label half td_label"><span><b class="result_label">Result</b><br>
+                        <input id="result" name="result" type="text" value="" inputmode="decimal"> — <input id="result2" name="result2" type="text" value="" inputmode="decimal"></span></div>
+                        <div class="half td_label"><label class="half td_label" for="coef"><span><b class="ratio_label">Odds</b><br>
+                        <input id="coef" name="coef" type="text" value="" inputmode="decimal"></span></label><label for="rate" class="half td_label"><span><b class="rate_label">Stake</b><br>
+                        <input id="rate" name="rate" type="text" value="" inputmode="decimal"></span></label>
+                        </div>
+                        </div>
+                        <hr>
+                        <p><span class="button">Calculate</span></p>
+                        <p id="alert" style="display: none;">Some data are not presented. The calculations may be incorrect.</p>
+                        </form>
+                        <div class="result" style="display: none;"><strong>Result</strong><p></p>
+                        <p id="result_text">
+                        </p><p id="win">
+                        </p></div>
+                        </div>
+                    </div>
+                </section>
             </main>
             <footer id="footer">
                 <p class="footer__p">
